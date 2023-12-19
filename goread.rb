@@ -5,42 +5,42 @@
 class Goread < Formula
   desc ""
   homepage "https://github.com/TypicalAM/homebrew-goread"
-  version "1.6.3"
+  version "1.6.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/TypicalAM/goread/releases/download/v1.6.3/goread_Darwin_arm64"
-      sha256 "d7e94fa08966075e1de1f6df1f2c09f2f8ec19daf806a3f34ce688932a7e09ac"
-
-      def install
-        bin.install "goread_Darwin_arm64" => "goread"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/TypicalAM/goread/releases/download/v1.6.3/goread_Darwin_x86_64"
-      sha256 "d99293f4ff32ea1d61f871c8f38309ff81230fc0e4bb08b38a2795612d0f5cc9"
+      url "https://github.com/TypicalAM/goread/releases/download/v1.6.4/goread_Darwin_x86_64"
+      sha256 "e85bbd0b692566d1a87580ce868c5b555cac103edb8743e56f5efaca146cf0fe"
 
       def install
         bin.install "goread_Darwin_x86_64" => "goread"
       end
     end
+    if Hardware::CPU.arm?
+      url "https://github.com/TypicalAM/goread/releases/download/v1.6.4/goread_Darwin_arm64"
+      sha256 "088819d97d8aba31540bd7e9828e5a3230e462a4f80f06e13fa00e747a9d06e1"
+
+      def install
+        bin.install "goread_Darwin_arm64" => "goread"
+      end
+    end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/TypicalAM/goread/releases/download/v1.6.3/goread_Linux_x86_64"
-      sha256 "495d1249d94bc4230ffeccef9fd90e3a6501b442e905837f2bb4df245746c5b9"
-
-      def install
-        bin.install "goread_Linux_x86_64" => "goread"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TypicalAM/goread/releases/download/v1.6.3/goread_Linux_arm64"
-      sha256 "efcecc2c37a0499a5d91e51b1dfb71394058374f961b83e39a446450772a8035"
+      url "https://github.com/TypicalAM/goread/releases/download/v1.6.4/goread_Linux_arm64"
+      sha256 "1699cbe5b082ba0952c122ed4a5178c3dc544be74f889a8639edd50b34d46b1e"
 
       def install
         bin.install "goread_Linux_arm64" => "goread"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/TypicalAM/goread/releases/download/v1.6.4/goread_Linux_x86_64"
+      sha256 "84e46d58812c603973aaf1aee77b1025b39cf522ba79ee7434ff3721370df0ac"
+
+      def install
+        bin.install "goread_Linux_x86_64" => "goread"
       end
     end
   end
