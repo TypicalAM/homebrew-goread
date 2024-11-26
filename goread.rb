@@ -5,20 +5,20 @@
 class Goread < Formula
   desc ""
   homepage "https://github.com/TypicalAM/homebrew-goread"
-  version "1.7.0"
+  version "1.7.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/TypicalAM/goread/releases/download/v1.7.0/goread_Darwin_x86_64"
-      sha256 "f3b8fd88f0b6bb0b737c4c14f51e943d3d3deb548afabf0e7176a7cfbfbe2b76"
+      url "https://github.com/TypicalAM/goread/releases/download/v1.7.1/goread_Darwin_x86_64"
+      sha256 "83c049490e1307934bf3b354e4406cccc2e83aa2fea7130ad3c72e658041f11b"
 
       def install
         bin.install "goread_Darwin_x86_64" => "goread"
       end
     end
     on_arm do
-      url "https://github.com/TypicalAM/goread/releases/download/v1.7.0/goread_Darwin_arm64"
-      sha256 "71cd849edb5ba41cdcf9fbb5d6dcc6f458e510504c237b61ec5f7d269b31be9c"
+      url "https://github.com/TypicalAM/goread/releases/download/v1.7.1/goread_Darwin_arm64"
+      sha256 "3d8f4310e60d06e7aed7a6ea3246bf770a38aa1e8f13d92f35b77e630f607462"
 
       def install
         bin.install "goread_Darwin_arm64" => "goread"
@@ -29,8 +29,8 @@ class Goread < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TypicalAM/goread/releases/download/v1.7.0/goread_Linux_x86_64"
-        sha256 "277167f2d09838a035da1f698c236d8d92d94a808ccf761f68140b86c4043f05"
+        url "https://github.com/TypicalAM/goread/releases/download/v1.7.1/goread_Linux_x86_64"
+        sha256 "b90a1b191c318f21477508e7f4200c244ca388f021b931954587026c6011b3aa"
 
         def install
           bin.install "goread_Linux_x86_64" => "goread"
@@ -39,8 +39,8 @@ class Goread < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TypicalAM/goread/releases/download/v1.7.0/goread_Linux_arm64"
-        sha256 "ec9a691115d28f682bd6c88857dc2413daf9c2b31a92afcb7a6df95ab3b8015c"
+        url "https://github.com/TypicalAM/goread/releases/download/v1.7.1/goread_Linux_arm64"
+        sha256 "50c09ed46bc8aa535f53019fffe86eb7e5b647474c2a40b9a1542b121f067695"
 
         def install
           bin.install "goread_Linux_arm64" => "goread"
